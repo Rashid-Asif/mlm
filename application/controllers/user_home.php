@@ -18,6 +18,11 @@ class User_home extends CI_Controller{
         $this->load->view('user/v_user_home');
         $this->load->view('v_footer');
     }
+    function vc_check(){
+        $this->load->view('v_header');
+        $this->load->view('user/v_user_home');
+        $this->load->view('v_footer');
+    }
     function  logout(){
         $this->load->model('session_model');
         $this->session_model->logout();
