@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php?/$0 [PT,L]
+#Above Rule is needed to redirect a url without using index.php
+#example:Without it "base_url/controller/function_name" this format not work....
